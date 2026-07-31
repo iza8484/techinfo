@@ -64,7 +64,7 @@ $password = getenv('MYSQLPASSWORD') ?: '';
 $database = getenv('MYSQLDATABASE') ?: 'techinfo_db';
 $port = getenv('MYSQLPORT') ?: 3306;
 
-$$conexao = new mysqli($host, $user, $password, $database, $port);
+$conexao = new mysqli($host, $user, $password, $database, $port);
 
 if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);
