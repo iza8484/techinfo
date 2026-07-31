@@ -262,12 +262,11 @@ body {
 .formulario {
     background-color: #ffffff;
     max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 40px auto; /* <--- Altere aqui para dar respiro em cima e embaixo */
+    padding: 30px;     /* <--- Aumente para 30px para ficar mais confortável */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
 .campo-grupo {
     margin-bottom: 20px;
     display: flex;
@@ -445,4 +444,24 @@ body {
 
 .acessibilidade-contraste .rodape p {
     color: #ffffff !important;
+}
+.acessibilidade-contraste .btn-enviar {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+.acessibilidade-contraste .btn-enviar:hover {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
+.acessibilidade-contraste .btn-enviar {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+.acessibilidade-contraste .btn-enviar:hover {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
 }
