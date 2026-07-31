@@ -58,13 +58,13 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     exit;
 }
 
-$host = "127.0.0.1"; 
-$usuario = "root";
-$senha = "";
-$banco = "techinfo_db"; 
-$porta = 3306;
+$host = getenv('MYSQLHOST') ?: '127.0.0.1';
+$user = getenv('MYSQLUSER') ?: 'root';
+$password = getenv('MYSQLPASSWORD') ?: '';
+$database = getenv('MYSQLDATABASE') ?: 'techinfo_db';
+$port = getenv('MYSQLPORT') ?: 3306;
 
-$conexao = new mysqli($host, $usuario, $senha, $banco, $porta);
+$conn = new mysqli($host, $user, $password, $database, $port);
 
 if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);
