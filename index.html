@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inscrições abertas para os cursos técnicos da TechInfo.">
+
+    <title>TechInfo - Escola Técnica de Informática</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="barra-acessibilidade">
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+    <button onclick="alternarContraste()">Contraste</button>
+    </div>
+
+    <a href="#conteudo-principal" class="sr-only">Ir para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo"><h2>Tech<span>Info</span></h2></div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#matricula">Pré-Matrícula</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Transforme seu futuro com a Tecnologia</h1>
+                <p>Cursos técnicos focados no mercado de trabalho com alta taxa de empregabilidade.</p>
+                <a href="#matricula" class="btn-principal">Quero me Matricular</a>
+            </div>
+        </section>
+
+
+
+    <section id="cursos" class="secao-cursos">
+    <div class="container">
+        <h3 class="titulo-secao">Nossos Cursos</h3>
+        
+        <div class="grade-cursos">
+            
+             <article class="cartao-curso">
+                        <h4>Técnico em Informática</h4>
+                        <p>Aprenda a planejar e executar os processos de manutenção, redes e a lógica de programação.</p>
+                        <h5>O que você vai aprender:</h5>
+                        <ul>
+                            <li>Arquitetura de Computadores</li>
+                            <li>Redes de Computadores</li>
+                            <li>Lógica de Programação</li>
+                        </ul>
+                    </article>
+
+                    <article class="cartao-curso">
+                        <h4>Desenvolvimento Web</h4>
+                        <p>Domine as tecnologias mais modernas do mercado para criar sites e aplicativos incríveis.</p>
+                        <h5>O que você vai aprender:</h5>
+                        <ul>
+                            <li>HTML5 e CSS3 Semântico</li>
+                            <li>JavaScript e jQuery</li>
+                            <li>Padrões W3C e Responsividade</li>
+                        </ul>
+                    </article>
+
+                    <article class="cartao-curso">
+                        <h4>Banco de Dados</h4>
+                        <p>Aprenda a modelar, gerenciar e otimizar bancos de dados relacionais e segurança da informação.</p>
+                        <h5>O que você vai aprender:</h5>
+                        <ul>
+                            <li>Modelagem Relacional</li>
+                            <li>Linguagem SQL</li>
+                            <li>Administração de Banco de Dados</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    <section id="matricula" class="secao-matricula">
+    <div class="container">
+        <h3 class="titulo-secao">Faça sua Pré-Matrícula</h3>
+        
+        <form id="form-matricula" class="formulario" action="processar_matricula.php" method="POST" novalidate>
+            
+            <div class="campo-grupo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" aria-describedby="erro-nome">
+                <span id="erro-nome" class="erro-mensagem" aria-live="polite" style="display: none;">Por favor, insira um nome válido.</span>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required placeholder="nome@exemplo.com" aria-describedby="erro-email">
+                <span id="erro-email" class="erro-mensagem" aria-live="polite" style="display: none;">Por favor, insira um e-mail válido.</span>
+            </div>
+            <div class="campo-grupo">
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX" aria-describedby="erro-telefone">
+    <span id="erro-telefone" class="erro-mensagem" aria-live="polite" style="display: none;">Por favor, insira um telefone válido.</span>
+</div>
+
+            <div class="campo-grupo">
+                <label for="curso-interesse">Curso:</label>
+
+             <!-- Troque os values no index.html -->
+<select id="curso-interesse" name="curso-interesse" required aria-describedby="erro-curso">
+    <option value="">Selecione um curso...</option>
+    <option value="Técnico em Informática">Técnico em Informática</option>
+    <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+    <option value="Banco de Dados">Banco de Dados</option>
+</select>
+                <span id="erro-curso" class="erro-mensagem" aria-live="polite" style="display: none;">Selecione um curso.</span>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form> 
+        </div>
+</section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 TechInfo Cursos Técnicos. Todos os direitos reservados.</p>
+            <p>Construído seguindo as diretrizes de Acessibilidade e Web Standards.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

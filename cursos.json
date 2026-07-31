@@ -1,0 +1,29 @@
+[
+    {
+        "titulo": "Técnico em Informática",
+        "descricao": "Aprenda a planejar e executar os processos de manutenção, redes e a lógica de programação.",
+        "topicos": [
+            "Arquitetura de Computadores",
+            "Redes de Computadores",
+            "Lógica de Programação"
+        ]
+    },
+    {
+        "titulo": "Desenvolvimento Web",
+        "descricao": "Domine as tecnologias mais modernas do mercado para criar sites e aplicativos incríveis.",
+        "topicos": [
+            "HTML5 e CSS3 Semântico",
+            "JavaScript e jQuery",
+            "Padrões W3C e Responsividade"
+        ]
+    },
+    {
+        "titulo": "Banco de Dados",
+        "descricao": "Aprenda a modelar, gerenciar e otimizar bancos de dados relacionais e segurança da informação.",
+        "topicos": [
+            "Modelagem Relacional",
+            "Linguagem SQL",
+            "Administração de Banco de Dados"
+        ]
+    }
+]
