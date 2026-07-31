@@ -1,16 +1,13 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
-# Habilita o mod_rewrite do Apache
-RUN a2enmod rewrite
-
-# Instala extensoes para o MySQL
+# Instala extensoes do MySQL
 RUN docker-php-ext-install pdo pdo_mysql mysqli
 
+# Define o diretorio de trabalho
+WORKDIR /var/www/html
+
 # Copia os arquivos do projeto
-COPY . /var/www/html/
+COPY . .
 
-# Ajusta as permissoes dos arquivos
-RUN chown -R www-data:www-data /var/www/html
-
-# Altera a porta do Apache para usar a variavel $PORT do Railway ao iniciar
-CMD sh -c "sed -i 's/80/'\${PORT:-80}'/g' /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf && apache2-foreground"
+# Inicia o servidor embutido do PHP apontando para a porta do Railway
+CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-8080}"]
